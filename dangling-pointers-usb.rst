@@ -38,6 +38,7 @@ satisfied:
 Here is the full function:
 
 .. code-block:: c
+
    static int
 	uvc_function_bind(struct usb_configuration *c, struct usb_function *f)
 	{
@@ -247,6 +248,7 @@ Here is the full function:
 The ``error:`` block will be the most important here:
 
 .. code-block:: c
+
    error:
       if (uvc->control_req)
          usb_ep_free_request(cdev->gadget->ep0, uvc->control_req);
@@ -261,6 +263,7 @@ contrary to kernel rules. we will discuss the fix later, moving on to the unbind
 function ``uvc_function_unbind()``, where this is more blatant:
 
 .. code-block:: c
+
    static void uvc_function_unbind(struct usb_configuration *c,
    				struct usb_function *f)
    {
