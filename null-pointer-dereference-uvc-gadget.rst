@@ -61,6 +61,7 @@ The Solution
 
 To fix this, we first need to look at the video struct, it is of type ``struct uvc_video``.
 Looking at its blueprint(*taken from kernel docs*), we have:
+
 .. code-block:: c
 
    struct uvc_video {
@@ -121,6 +122,7 @@ We see ``uvc`` is of type ``struct uvc_device``. We also get uvc as an argument 
 passed in ``uvcg_video_init()``. This is especially useful as we can now just use
 ``uvc`` directly without referencing ``video``. Looking at ``struct uvc_device``, we
 see:
+
 .. code-block:: c
 
    struct uvc_device {
@@ -169,6 +171,7 @@ The Patch
 As per solution, we implement the patch as:
 
 .. code-block:: diff
+
    diff --git a/drivers/usb/gadget/function/uvc_video.c b/drivers/usb/gadget/function/uvc_video.c
    index 2f9700b..9ba0911 100644
    --- a/drivers/usb/gadget/function/uvc_video.c
