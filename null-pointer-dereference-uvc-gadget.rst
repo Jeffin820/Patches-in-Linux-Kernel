@@ -18,6 +18,7 @@ The Problem
 In video initialization function ```uvcg_video_init()``` error path, we use
 ```uvcg_err(&video->uvc->func, "failed to create UVCG kworker\n");```, however, if you
 look at the whole function:
+
 ..code-block:: c
 
 int uvcg_video_init(struct uvc_video *video, struct uvc_device *uvc)
@@ -181,7 +182,7 @@ index 2f9700b..9ba0911 100644
  		return PTR_ERR(video->kworker);
  	}
 
-```Status: *Not merged(In usb-next)*```
+```Status: *Not merged(Currently in usb-next)*```
 
 References
 ========== 
