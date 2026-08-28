@@ -185,7 +185,7 @@ As per solution, we implement the patch as:
  		   return PTR_ERR(video->kworker);
  	   }
 
-``Status: *Not merged(Currently in usb-next)*``
+``Status: *Merged(Kernel v7.3-rc1)*``
 
 References
 ========== 
