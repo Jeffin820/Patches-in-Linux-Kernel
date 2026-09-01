@@ -178,4 +178,4 @@ Based on our solution, we can patch this by:
 
 References
 ==========
-https://lore.kernel.org/all/20260818035904.10324-1-jeffinphilip14@gmail.com/
+https://patch.msgid.link/20260818035904.10324-1-jeffinphilip14@gmail.com
