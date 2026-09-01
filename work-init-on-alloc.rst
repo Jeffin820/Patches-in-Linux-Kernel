@@ -256,9 +256,9 @@ Base on the solution, our patch would be:
     	midi->index = opts->index;
     	midi->buflen = opts->buflen;
 
-``Status: Reviewed``
+``Status: Pending merge(v7.3-rc2)``
 
 References
 ==========
 
-https://lore.kernel.org/all/20260815054006.102325-1-jeffinphilip14@gmail.com/
+https://patch.msgid.link/20260815054006.102325-1-jeffinphilip14@gmail.com
