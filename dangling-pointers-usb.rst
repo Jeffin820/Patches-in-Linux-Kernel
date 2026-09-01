@@ -373,7 +373,7 @@ As per solution, we implement patch as:
  	   usb_free_all_descriptors(f);
    }
 
-``Status: Not Merged(In usb-next)``
+``Status: Merged(Kernel v7.3-rc1)``
 
 References
 ==========
