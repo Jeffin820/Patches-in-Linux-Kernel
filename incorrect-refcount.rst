@@ -27,7 +27,7 @@ its location violates kernel rules where ``put()`` must always
 be the last after operating on all the struct's members. However,
 in our function(``dvb_device_remove()``), we have:
 
-.. code-block::c
+.. code-block:: c
 
    void dvb_remove_device(struct dvb_device *dvbdev)
    {
@@ -51,7 +51,7 @@ Here, if refcount is 1(which it likely is as we are in ``dvb_device_remove()``),
 dvbdevice struct will be freed and ``dvb_media_device_free()`` will try to 
 dereference the struct after it has been freed:
 
-.. code-block::c
+.. code-block:: c
 
    static void dvb_media_device_free(struct dvb_device *dvbdev)
    {
@@ -106,7 +106,7 @@ The Patch
 
 As per solution, we implement the patch as:
 
-.. code-block::diff
+.. code-block:: diff
 
    diff --git a/drivers/media/dvb-core/dvbdev.c b/drivers/media/dvb-core/dvbdev.c
    index d753d329502a..9aa4b8fd7379 100644
