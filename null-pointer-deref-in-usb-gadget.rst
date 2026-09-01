@@ -174,7 +174,7 @@ Based on our solution, we can patch this by:
     	if (!buffhds)
     		return -ENOMEM;
 
-``Status: Acknowledged``
+``Status: Pending merge(v7.3-rc2)``
 
 References
 ==========
